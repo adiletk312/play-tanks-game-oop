@@ -1,11 +1,14 @@
-function Field(width, height) {
-    this.width = width;
-    this.height = height;
+class Field {
+    constructor(width, height) {
+        this._width = width;
+        this._height = height;
+    }
 
-    this.isInside = function(x, y) {
-        return x >= 0 && x < this.width &&
-               y >= 0 && y < this.height;
+    isInside(x, y) {
+        return x >= 0 && x < this._width &&
+               y >= 0 && y < this._height;
     }
 }
 
-module.exports = Field;
+module.exports = Field; 
+ 
